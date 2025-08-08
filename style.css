@@ -1,188 +1,179 @@
 /* 바디 기본 설정 */
 body {
     font-family: 'Roboto', sans-serif; /* 구글 폰트 로보토 적용 */
-    line-height: 1.7; /* 줄 간격 설정 */
-    margin: 0; /* 기본 마진 제거 */
-    padding: 0; /* 기본 패딩 제거 */
-    background: #f8f9fa; /* 연한 회색 배경색 */
-    color: #797979ff; /* 글자 색상(짙은 회색) */
-    scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: #797979ff;
+    scroll-behavior: smooth;
 }
 
 /* 컨테이너 너비 및 가운데 정렬 */
 .container {
-    width: 85%; /* 최대 너비 85% */
-    max-width: 1200px; /* 최대 폭 1200px 제한 */
-    margin: auto; /* 자동 마진으로 가운데 정렬 */
-    overflow: hidden; /* 넘치는 콘텐츠 숨김 */
-    padding: 0 20px; /* 좌우 패딩 20px */
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
 }
 
 /* 제목 태그 스타일 */
-h1,
-h2,
-h3 {
-    font-family: 'Montserrat', sans-serif; /* 구글 폰트 몬세라 적용 */
-    color: #212529; /* 짙은 검정색 계열 */
-    margin-bottom: 15px; /* 아래쪽 마진 */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #212529;
+    margin-bottom: 15px;
 }
 
 /* 링크 기본 스타일 */
 a {
-    color: #007bff; /* 파란색 링크 */
-    text-decoration: none; /* 밑줄 제거 */
-    transition: color 0.3s ease; /* 색상 변경 부드럽게 */
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-
-/* 링크 호버 시 */
 a:hover {
-    color: #0056b3; /* 더 진한 파란색 */
-    text-decoration: underline; /* 밑줄 표시 */
+    color: #0056b3;
+    text-decoration: underline;
 }
 
 /* 버튼 기본 스타일 */
 .btn {
-    display: inline-block; /* 인라인 블록 */
-    color: #fff; /* 흰색 글자 */
-    background: #007bff; /* 파란색 배경 */
-    padding: 12px 25px; /* 상하 12px, 좌우 25px 패딩 */
-    margin-top: 25px; /* 위쪽 마진 */
-    border-radius: 50px; /* 둥근 모서리 (동그랗게) */
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* 부드러운 변화 */
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* 그림자 효과 */
-    margin: 10px; /* 여백 */
+    display: inline-block;
+    color: #fff;
+    background: #007bff;
+    padding: 12px 25px;
+    margin-top: 25px;
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    margin: 10px;
 }
-
-/* 버튼 호버 시 스타일 */
 .btn:hover {
-    background: #ffffffff; /* 진한 파란색 배경 */
-    transform: translateY(-5px); /* 위로 살짝 이동 */
-    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.4); /* 그림자 확대 */
-    text-decoration: none; /* 밑줄 제거 */
+    background: #ffffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.4);
+    text-decoration: none;
 }
-
-/* 보조 버튼 스타일 */
 .btn-secondary {
-    background: #6c757d; /* 회색 배경 */
-    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3); /* 약한 그림자 */
+    background: #6c757d;
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
 }
-
-/* 보조 버튼 호버 시 */
 .btn-secondary:hover {
-    background: #ffffffff; /* 좀 더 진한 회색 */
-    box-shadow: 0 8px 16px rgba(108, 117, 125, 0.4); /* 그림자 확대 */
+    background: #ffffffff;
+    box-shadow: 0 8px 16px rgba(108, 117, 125, 0.4);
 }
 
-/* 헤더 스타일 */
+/* 헤더 전체를 flex 컨테이너로 */
 header {
-    background: #212529; /* 짙은 배경색 */
-    color: #fff; /* 흰색 텍스트 */
-    padding: 20px 0; /* 상하 패딩 */
-    min-height: 70px; /* 최소 높이 */
-    border-bottom: #007bff 4px solid; /* 아래 파란색 테두리 */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); /* 그림자 효과 */
-    position: sticky; /* 스크롤 시 고정 */
-    top: 0; /* 상단 고정 */
-    z-index: 1000; /* 최상위 레이어 */
+    display: flex;
+    justify-content: space-between; /* 좌측 h1, 우측 nav */
+    align-items: center;
+    padding: 20px 20px;
+    background: #212529;
+    color: #fff;
+    min-height: 70px;
+    border-bottom: #007bff 4px solid;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* 헤더 내부 제목 */
+/* 헤더 제목 (왼쪽) */
 header h1 {
-    float: left; /* 왼쪽 정렬 */
-    margin: 0; /* 마진 제거 */
-    padding: 0; /* 패딩 제거 */
-    color: #fff; /* 흰색 */
-    font-size: 2.2em; /* 글자 크기 */
+    margin: 0;
+    padding: 0;
+    font-size: 2.2em;
+    flex-shrink: 1;      /* 공간 부족 시 줄어듦 */
+    flex-grow: 1;        /* 남는 공간 차지 */
+    min-width: 0;        /* 말줄임 작동 */
+    white-space: nowrap; /* 한 줄 유지 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 말줄임표 */
+    color: #fff;
 }
 
-/* 헤더 내 네비게이션 */
+/* 네비게이션 (오른쪽) */
 header nav {
-    float: right; /* 오른쪽 정렬 */
-    margin-top: 5px; /* 위쪽 마진 */
+    flex-shrink: 0;  /* 크기 줄어들지 않음 */
+    min-width: 0;
 }
 
-/* 헤더 내 리스트 기본 */
-header ul {
-    margin: 0; /* 마진 제거 */
-    padding: 0; /* 패딩 제거 */
-    list-style: none; /* 리스트 점 제거 */
+/* nav ul을 flex로 배치, 메뉴가 넘치면 스크롤 가능 */
+header nav ul {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: auto;            /* 넘칠 때 가로 스크롤 */
+    -webkit-overflow-scrolling: touch; /* 터치 스크롤 부드럽게 */
 }
 
-/* 헤더 내 리스트 아이템 */
-header li {
-    display: inline; /* 인라인으로 표시 */
-    padding: 0 20px; /* 좌우 패딩 */
+/* 메뉴 아이템 */
+header nav ul li {
+    flex-shrink: 0; /* 작아지지 않게 */
 }
 
-/* 헤더 내 링크 스타일 */
-header a {
-    color: #fff; /* 흰색 */
-    text-transform: uppercase; /* 대문자 변환 */
-    font-size: 1.1em; /* 글자 크기 */
-    font-weight: 500; /* 글자 굵기 */
-    transition: color 0.3s ease, transform 0.2s ease; /* 부드러운 효과 */
+/* 메뉴 링크 */
+header nav ul li a {
+    font-size: 1.1em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0 8px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+header nav ul li a:hover {
+    color: #007bff;
+    transform: translateY(-2px);
+    text-decoration: none;
 }
 
-/* 헤더 링크 호버 시 */
-header a:hover {
-    color: #007bff; /* 파란색 */
-    transform: translateY(-2px); /* 살짝 위로 이동 */
-    text-decoration: none; /* 밑줄 없음 */
-}
-
-/* 히어로 섹션(메인 이미지 영역) */
+/* 히어로 섹션 */
 #hero {
-    min-height: 500px; /* 최소 높이 */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* 반투명 검은색 그라데이션 */
-                url('https://via.placeholder.com/1500x500/007bff/ffffff?text=Your+Hero+Image') no-repeat center center/cover; /* 배경 이미지 */
-    background-attachment: fixed; /* 배경 고정 */
-    text-align: center; /* 가운데 정렬 */
-    color: #fff; /* 흰색 글자 */
-    display: flex; /* 플렉스박스 */
-    align-items: center; /* 세로 중앙 정렬 */
-    justify-content: center; /* 가로 중앙 정렬 */
-    flex-direction: column; /* 세로 방향 정렬 */
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* 글자 그림자 */
-    position: relative; /* 상대 위치 */
+    min-height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://via.placeholder.com/1500x500/007bff/ffffff?text=Your+Hero+Image') no-repeat center center/cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    position: relative;
 }
-
-/* 히어로 제목 */
 #hero h2 {
-    font-size: 3.5em; /* 큰 글자 크기 */
-    margin-bottom: 15px; /* 아래쪽 마진 */
-    color: #fff; /* 흰색 */
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: #fff;
 }
-
-/* 히어로 부제목 */
 #hero p.lead {
-    font-size: 1.4em; /* 부드러운 크기 */
-    max-width: 700px; /* 최대 너비 */
-    margin: 0 auto 10px; /* 가운데 정렬 및 아래 마진 */
+    font-size: 1.4em;
+    max-width: 700px;
+    margin: 0 auto 10px;
 }
-
-/* 히어로 서브 텍스트 */
 #hero p.sub-lead {
-    font-size: 1.1em; /* 조금 작은 크기 */
-    max-width: 600px; /* 최대 너비 */
-    margin: 0 auto 20px; /* 아래 마진 */
-    opacity: 0.8; /* 반투명 */
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    opacity: 0.8;
 }
 
-/* 타이핑 효과 텍스트 */
+/* 타이핑 효과 */
 #typing-text {
-    border-right: 2px solid #fff; /* 오른쪽 커서 */
-    white-space: nowrap; /* 줄바꿈 방지 */
-    overflow: hidden; /* 넘침 숨김 */
-    animation: typing 3.5s steps(40, end) forwards, blink-caret .75s step-end infinite; /* 타이핑 애니메이션 */
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end) forwards, blink-caret .75s step-end infinite;
 }
-
-/* 타이핑 애니메이션 키프레임 */
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
 }
-
-/* 커서 깜빡임 애니메이션 */
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: #fff; }
@@ -190,171 +181,135 @@ header a:hover {
 
 /* 섹션 기본 스타일 */
 section {
-    padding: 20px 0; /* 위아래 패딩 */
-    border-bottom: 1px solid #e9ecef; /* 하단 경계선 */
+    padding: 20px 0;
+    border-bottom: 1px solid #e9ecef;
     opacity: 1;
-    transform: translateY(20px); /* 아래로 약간 이동 */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 부드러운 트랜지션 */
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
-/* 스크롤 시 보이게 하는 클래스 */
 section.is-visible {
     opacity: 1;
-    transform: translateY(0); /* 원래 위치로 */
+    transform: translateY(0);
 }
-
-/* 짝수번째 섹션 배경색 */
 section:nth-child(even) {
-    background: #f1f3f5; /* 연한 회색 배경 */
+    background: #f1f3f5;
 }
-
-/* 섹션 제목 스타일 */
 section h2 {
-    text-align: center; /* 가운데 정렬 */
-    margin-bottom: 50px; /* 아래 마진 */
-    font-size: 3em; /* 크기 */
-    color: #007bff; /* 파란색 */
-    position: relative; /* 위치 설정 */
-    padding-bottom: 10px; /* 아래 패딩 */
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3em;
+    color: #007bff;
+    position: relative;
+    padding-bottom: 10px;
 }
-
-/* 섹션 제목 밑줄 */
 section h2::after {
     content: '';
     position: absolute;
-    left: 50%; /* 가운데 정렬 */
-    bottom: 0; /* 아래쪽 */
-    transform: translateX(-50%); /* 중앙 정렬 */
-    width: 80px; /* 너비 */
-    height: 4px; /* 높이 */
-    background-color: #007bff; /* 파란색 */
-    border-radius: 2px; /* 둥근 모서리 */
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
 }
 
-/* 소개 섹션 내부 레이아웃 */
+/* 소개 섹션 */
 .about-content {
-    display: flex; /* 플렉스 박스 */
-    flex-wrap: wrap; /* 줄바꿈 */
-    align-items: center; /* 세로 중앙 정렬 */
-    gap: 40px; /* 아이템 간격 */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
 }
-
-/* 소개 사진 영역 */
 .about-image {
-    flex: 1; /* 가변 너비 */
-    min-width: 250px; /* 최소 너비 */
-    text-align: center; /* 가운데 정렬 */
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
 }
-
-/* 소개 사진 */
 .about-image img {
-    max-width: 100%; /* 최대 너비 */
-    border-radius: 50%; /* 원형 이미지 */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* 그림자 효과 */
-    transition: transform 0.3s ease; /* 부드러운 확대 효과 */
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
-
-/* 사진 호버 시 확대 */
 .about-image img:hover {
-    transform: scale(1.05); /* 5% 확대 */
+    transform: scale(1.05);
 }
-
-/* 소개 텍스트 영역 */
 .about-text {
-    flex: 2; /* 넓게 차지 */
-    font-size: 1.1em; /* 글자 크기 */
-    text-align: justify; /* 양쪽 정렬 */
+    flex: 2;
+    font-size: 1.1em;
+    text-align: justify;
 }
-
-/* 소개 문단 간격 */
 .about-text p {
-    margin-bottom: 15px; /* 아래 마진 */
+    margin-bottom: 15px;
 }
 
-/* 기술 스택 섹션 개별 카테고리 */
+/* 기술 스택 */
 .skills .skill-category {
-    background: #fff; /* 흰색 배경 */
-    padding: 30px; /* 패딩 */
-    margin-bottom: 30px; /* 아래 마진 */
-    border-radius: 10px; /* 둥근 모서리 */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 그림자 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 부드러운 변화 */
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* 기술 카테고리 호버 시 */
 .skills .skill-category:hover {
-    transform: translateY(-8px); /* 살짝 위로 이동 */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* 그림자 확장 */
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
-
-/* 기술 카테고리 제목 */
 .skills .skill-category h3 {
-    color: #007bff; /* 파란색 */
+    color: #007bff;
     margin-top: 0;
-    border-bottom: 2px solid #e9ecef; /* 아래 경계선 */
+    border-bottom: 2px solid #e9ecef;
     padding-bottom: 15px;
     margin-bottom: 20px;
     font-size: 1.8em;
 }
-
-/* 기술 리스트 */
 .skills ul {
-    list-style: none; /* 기본 점 제거 */
-    padding: 0; /* 패딩 제거 */
-    display: flex; /* 플렉스 박스 */
-    flex-wrap: wrap; /* 줄바꿈 */
-    gap: 12px; /* 간격 */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
-
-/* 기술 리스트 아이템 */
 .skills li {
-    background: #e9ecef; /* 연한 회색 배경 */
-    padding: 12px 20px; /* 패딩 */
-    border-radius: 25px; /* 둥근 모서리 */
+    background: #e9ecef;
+    padding: 12px 20px;
+    border-radius: 25px;
     font-size: 1em;
     font-weight: 500;
-    transition: background 0.3s ease, transform 0.2s ease; /* 부드러운 변화 */
+    transition: background 0.3s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
-    gap: 8px; /* 아이콘과 텍스트 간격 */
+    gap: 8px;
 }
-
-/* 기술 리스트 호버 시 */
 .skills li:hover {
-    background: #d0d7dd; /* 더 진한 회색 */
-    transform: scale(1.05); /* 확대 */
+    background: #d0d7dd;
+    transform: scale(1.05);
 }
-
-/* 기술 아이콘 색상 */
 .skills li i {
-    color: #007bff; /* 파란색 */
+    color: #007bff;
     font-size: 1.1em;
 }
 
-/* 포트폴리오 그리드 */
+/* 포트폴리오 */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 반응형 1~n열 */
-    gap: 40px; /* 간격 */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
 }
-
-/* 포트폴리오 아이템 */
 .portfolio-item {
-    background: #fff; /* 흰색 배경 */
+    background: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* 아이템 호버 시 효과 */
 .portfolio-item:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
-
-/* 포트폴리오 이미지 */
 .portfolio-item img {
     max-width: 100%;
     height: auto;
@@ -362,229 +317,200 @@ section h2::after {
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* 포트폴리오 제목 */
 .portfolio-item h3 {
     color: #007bff;
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 1.8em;
 }
-
-/* 포트폴리오 설명 */
 .portfolio-item p {
     margin-bottom: 25px;
     font-size: 1.05em;
 }
-
-/* 포트폴리오 링크 */
 .portfolio-item a {
     font-weight: bold;
 }
 
-/* 연락처 섹션 리스트 */
+/* 연락처 섹션 */
 .contact ul {
     list-style: none;
     padding: 0;
     text-align: center;
 }
-
-/* 연락처 리스트 아이템 */
 .contact li {
     margin-bottom: 20px;
 }
-
-/* 연락처 링크 스타일 */
 .contact li a {
     font-size: 1.2em;
     transition: color 0.3s ease, transform 0.2s ease;
     display: inline-flex;
     align-items: center;
-    gap: 10px; /* 아이콘과 텍스트 간격 */
+    gap: 10px;
 }
-
-/* 연락처 링크 호버 시 */
 .contact li a:hover {
-    color: #0056b3; /* 진한 파란색 */
-    transform: translateX(8px); /* 오른쪽 이동 */
+    color: #0056b3;
+    transform: translateX(8px);
 }
-
-/* 연락처 아이콘 색상 */
 .contact li i {
     color: #007bff;
     font-size: 1.3em;
 }
 
-/* 푸터 스타일 */
+/* 푸터 */
 footer {
-    background: #212529; /* 짙은 배경 */
-    color: #fff; /* 흰색 텍스트 */
+    background: #212529;
+    color: #fff;
     text-align: center;
-    padding: 30px 0; /* 상하 패딩 */
+    padding: 30px 0;
     font-size: 0.95em;
-    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.25); /* 위쪽 그림자 */
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.25);
 }
 
 /* 스크롤 투 탑 버튼 */
 #scrollToTopBtn {
-    display: none; /* 기본 숨김 */
-    position: fixed; /* 화면 고정 */
-    bottom: 30px; /* 아래쪽 위치 */
-    right: 30px; /* 오른쪽 위치 */
-    z-index: 99; /* 레이어 높음 */
-    border: none; /* 테두리 제거 */
-    outline: none; /* 외곽선 제거 */
-    background-color: #007bff; /* 파란색 배경 */
-    color: white; /* 흰색 글자 */
-    cursor: pointer; /* 커서 포인터 */
-    padding: 15px; /* 패딩 */
-    border-radius: 50%; /* 동그란 모서리 */
-    font-size: 1.5em; /* 큰 글자 */
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* 그림자 */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* 부드러운 효과 */
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
-
-/* 스크롤 투 탑 버튼 호버 시 */
 #scrollToTopBtn:hover {
-    background-color: #0056b3; /* 진한 파란색 */
-    transform: translateY(-3px); /* 위로 이동 */
-    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.4); /* 그림자 확대 */
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.4);
 }
 
 /* 반응형 디자인: 992px 이하 */
 @media (max-width: 992px) {
     .container {
-        width: 90%; /* 컨테이너 너비 조정 */
+        width: 90%;
     }
-
     #hero h2 {
-        font-size: 3em; /* 제목 크기 조정 */
+        font-size: 3em;
     }
-
     #hero p.lead {
-        font-size: 1.2em; /* 부제목 크기 */
+        font-size: 1.2em;
     }
-
     #hero p.sub-lead {
         font-size: 1em;
     }
-
     section h2 {
         font-size: 2.5em;
     }
-
     .skills .skill-category h3,
     .portfolio-item h3 {
         font-size: 1.6em;
     }
-
     .about-content {
-        flex-direction: column; /* 세로 정렬 */
-        text-align: center; /* 가운데 정렬 */
+        flex-direction: column;
+        text-align: center;
     }
-
     .about-image img {
-        margin-bottom: 20px; /* 아래 마진 */
+        margin-bottom: 20px;
     }
 }
 
 /* 반응형 디자인: 768px 이하 */
 @media (max-width: 768px) {
-    header h1,
-    header nav {
-        float: none; /* 플로팅 해제 */
-        text-align: center; /* 가운데 정렬 */
+    header {
+        padding: 0 15px;
+        gap: 10px;
     }
-
-    header nav ul li {
-        padding: 0 10px; /* 좌우 패딩 축소 */
+    header h1 {
+        font-size: 1.4em;
+        flex-grow: 1;
     }
-
+    header nav ul {
+        gap: 8px;
+    }
+    header nav ul li a {
+        font-size: 0.9em;
+        padding: 6px 6px;
+    }
     #hero {
-        min-height: 400px; /* 히어로 높이 축소 */
+        min-height: 400px;
     }
-
     #hero h2 {
-        font-size: 2.5em; /* 제목 크기 축소 */
+        font-size: 2.5em;
     }
-
     #hero p.lead {
         font-size: 1.1em;
     }
-
     #hero p.sub-lead {
         font-size: 0.9em;
     }
-
     .container {
-        width: 95%; /* 컨테이너 너비 확대 */
+        width: 95%;
     }
-
     .portfolio-grid {
-        grid-template-columns: 1fr; /* 1열로 변경 */
+        grid-template-columns: 1fr;
     }
-
     .skills li {
-        margin-right: 5px; /* 오른쪽 마진 축소 */
+        margin-right: 5px;
     }
-
     section h2 {
         font-size: 2.2em;
     }
-
     #scrollToTopBtn {
-        padding: 12px; /* 버튼 패딩 축소 */
-        font-size: 1.2em; /* 글자 크기 축소 */
-        bottom: 20px; /* 위치 조정 */
+        padding: 12px;
+        font-size: 1.2em;
+        bottom: 20px;
         right: 20px;
     }
 }
 
 /* 반응형 디자인: 480px 이하 */
 @media (max-width: 480px) {
-    header {
-        min-height: auto; /* 자동 높이 */
+    header h1 {
+        font-size: 1.1em;
     }
-
     header nav ul li {
-        display: block; /* 블록 요소로 변경 */
-        padding: 8px 0; /* 위아래 패딩 */
+        display: block;
+        padding: 8px 0;
     }
-
+    header nav ul li a {
+        font-size: 0.8em;
+        padding: 4px 6px;
+    }
     #hero {
-        min-height: 350px; /* 높이 축소 */
+        min-height: 350px;
     }
-
     #hero h2 {
-        font-size: 2em; /* 제목 크기 축소 */
+        font-size: 2em;
     }
-
     .btn {
-        padding: 10px 20px; /* 버튼 패딩 축소 */
-        font-size: 0.9em; /* 글자 크기 축소 */
+        padding: 10px 20px;
+        font-size: 0.9em;
     }
-
     section h2 {
-        font-size: 1.8em; /* 제목 크기 축소 */
+        font-size: 1.8em;
     }
-
     .skills ul {
-        justify-content: center; /* 가운데 정렬 */
+        justify-content: center;
     }
-
     .skills .skill-category,
     .portfolio-item {
-        padding: 20px; /* 패딩 축소 */
+        padding: 20px;
     }
 }
 
-/* 파티클 캔버스 설정 */
+/* 파티클 캔버스 */
 #particle-canvas {
-  position: fixed; /* 화면 고정 */
-  top: 0; left: 0; /* 좌상단 고정 */
-  width: 100vw; /* 전체 가로 폭 */
-  height: 100vh; /* 전체 세로 높이 */
-  z-index: -1; /* 다른 콘텐츠 뒤에 위치 */
-  pointer-events: none; /* 마우스 이벤트 무시 */
-  background: rgba(0, 0, 0, 0.15); /* 연한 검정 반투명 배경 */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.15);
 }
