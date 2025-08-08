@@ -103,8 +103,8 @@ header nav {
 header nav ul {
     display: flex;
     gap: 15px;
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
     list-style: none;
     overflow-x: auto;            /* 넘칠 때 가로 스크롤 */
     -webkit-overflow-scrolling: touch; /* 터치 스크롤 부드럽게 */
